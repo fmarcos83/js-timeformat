@@ -1,4 +1,4 @@
-# JS-TIMEFORMATTER
+# JS-TIMEFORMAT
 
 Formats timestamps in milliseconds to human readable format
 ## Examples
