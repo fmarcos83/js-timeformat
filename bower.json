@@ -1,0 +1,22 @@
+{
+  "name": "js-timeformat",
+  "version": "0.0.0",
+  "authors": [
+    "Francisco Marcos <fmarcos83@gmail.com>"
+  ],
+  "description": "timeformat from milliseconds to a different format",
+  "main": "TimeFormat.js",
+  "keywords": [
+    "DrikaTux.time",
+    "DrikaTux.TimeFormat"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/fmarcos83/js-timeformatter",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
