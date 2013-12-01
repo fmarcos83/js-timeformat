@@ -2,7 +2,16 @@
 
 Formats timestamps in milliseconds to human readable format
 ## Examples
-#### Instantiating
+
+```javascript
+var seconds = 3600*24+7200+360+59;
+var formatter = new TimeFormat('%Y %m %d %h:%i:%s');
+formatter.format(seconds);
+//expected result
+'0 0 1 02:06:59';
+```
+
+## License
 
 [MIT](http://opensource.org/licenses/mit-license.php)
 
