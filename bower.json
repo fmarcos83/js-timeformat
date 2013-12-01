@@ -5,7 +5,7 @@
     "Francisco Marcos <fmarcos83@gmail.com>"
   ],
   "description": "timeformat from milliseconds to a different format",
-  "main": "TimeFormat.js",
+  "main": "src/TimeFormat.js",
   "keywords": [
     "DrikaTux.time",
     "DrikaTux.TimeFormat"
