@@ -15,7 +15,7 @@ describe('TimeFormat', function(){
         expect(tf.format(year+month*12)).toEqual('2');
     });
     it('formats months independent', function(){
-        var tf = new TimeFormat('%M');
+        var tf = new TimeFormat('%m');
         expect(tf.format(year)).toEqual('12');
         expect(tf.format(year+day*30)).toEqual('12');
         expect(tf.format(year-month)).toEqual('11');
@@ -31,23 +31,27 @@ describe('TimeFormat', function(){
         expect(tf.format(year+day)).toEqual('366');
     });
     it('formats year and month', function(){
-        var tf = new TimeFormat('%Y%M');
+        var tf = new TimeFormat('%Y%m');
         expect(tf.format(year+month)).toEqual('11');
     });
     it('formats the dates according to input the format', function(){
-        var tf = new TimeFormat('%Y %M %d');
+        var tf = new TimeFormat('%Y %m %d');
         expect(tf.format(year+month)).toEqual('1 1 0');
-        tf = new TimeFormat('%Y %M %d %m %s');
-        expect(tf.format(year+month+(24*hour))).toEqual('1 1 1 0 0');
-        tf = new TimeFormat('%Y %M %d %h %m %s');
-        expect(tf.format(year+month+(23*hour))).toEqual('1 1 0 23 0 0');
-        tf = new TimeFormat('%Y %M %d %h %m %s');
-        expect(tf.format(year+month+(hour-minute))).toEqual('1 1 0 0 59 0');
-        tf = new TimeFormat('%Y %M %d %h %m %s');
-        expect(tf.format(year+month+(minute-second))).toEqual('1 1 0 0 0 59');
+        tf = new TimeFormat('%Y %m %d %i %s');
+        expect(tf.format(year+month+(24*hour))).toEqual('1 1 1 00 00');
+        tf = new TimeFormat('%Y %m %d %h %i %s');
+        expect(tf.format(year+month+(23*hour))).toEqual('1 1 0 23 00 00');
+        tf = new TimeFormat('%Y %m %d %h %i %s');
+        expect(tf.format(year+month+(hour-minute))).toEqual('1 1 0 00 59 00');
+        tf = new TimeFormat('%Y %m %d %h %i %s');
+        expect(tf.format(year+month+(minute-second))).toEqual('1 1 0 00 00 59');
     });
     it('formats the dates with different strings in the input', function(){
-        var tf = new TimeFormat('%Yyear %Mmonths %ddays');
+        var tf = new TimeFormat('%Yyear %mmonths %ddays');
         expect(tf.format(year+month)).toEqual('1year 1months 0days');
+    });
+    it('check format with preceding 0\'s', function(){
+        var tf = new TimeFormat('%h:%i:%s');
+        expect(tf.format(hour+minute+second)).toEqual('01:01:01');
     });
 });
