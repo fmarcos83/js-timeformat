@@ -11,7 +11,7 @@
     "DrikaTux.TimeFormat"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/fmarcos83/js-timeformatter",
+  "homepage": "https://github.com/fmarcos83/js-timeformat",
   "ignore": [
     "**/.*",
     "node_modules",
